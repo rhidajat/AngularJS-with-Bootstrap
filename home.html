@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="angular.bootstrap">
+<head>
+<title>BS Powered Home</title>
+<link rel="import" href="./header.html">
+<script src="./js/home.js"></script>
+</head>
+<body>
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Welcome to BS powered Angular App!</h1>
+		</div>
+	</div>
+
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#navbar">
+						<span class="glyphicon glyphicon-tower"></span>
+					</button>
+					<a class="navbar-brand" href="#">Rz</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div ng-controller="CollapsedCtrl">
+			<span><h3>Steph Curry</h3></span>
+			<button type="button" class="btn btn-default"
+				ng-click="isCollapsed = !isCollapsed">Open Details</button>
+			<hr>
+			<div uib-collapse="isCollapsed">
+				<div class="well well-lg">The reigning MVP</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<p class="text-muted">God has been faithful throughout my life
+				and He has not let me down even once. But I still have a hard time
+				believing that He would not let me down this time. Everytime it gets
+				a little bit too hard, I always doubt that He has a plan this time,
+				that He always has a plan. A plan to prosper us and not to harm us,
+				a plan to give us hopes and futures.</p>
+		</div>
+	</footer>
+</body>
+</html>
